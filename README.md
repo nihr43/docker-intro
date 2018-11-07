@@ -6,7 +6,7 @@
 ```
 FROM alpine:3.8
 #
-## dockerfile built to behave like a classical server.  boots openrc, loads sshd, and listens for root
+## dockerfile built to boot on sshd, and listen for root
 
 RUN apk update && apk upgrade
 
