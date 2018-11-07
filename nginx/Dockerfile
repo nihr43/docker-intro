@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:8
 
 RUN apt update && apt upgrade -y
 RUN apt install git nginx -y
