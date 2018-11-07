@@ -2,13 +2,13 @@
 #
 ## Builds all docker files found below ./*
 
-build_c () {
+build () {
   [ -d $1 ] || exit 1
   cd $1
   docker build -t "auto:`pwd | awk -F '/' '{print $NF}'`" .
   cd ..
 }
 
-export -f build_c
+export -f build
 
-parallel build_c {} ::: ./*
+parallel build {} ::: ./*
