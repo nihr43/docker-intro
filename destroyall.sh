@@ -10,8 +10,8 @@ export -f destroy
 
 
 
-LIST=`docker images | sed 1d | awk '{print $3}'`
+LIST=`docker images -q`
 
-while [ ! -z "`docker images | sed 1d`" ] ; do
+while [ ! -z "`docker images -q`" ] ; do
   parallel destroy {} ::: $LIST
 done

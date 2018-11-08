@@ -8,9 +8,7 @@ stop () {
 export -f stop
 
 
-####
 
-
-LIST=`docker container list | sed 1d | awk '{print $1}'`
+LIST=`docker container list -q`
 
 parallel stop {} ::: $LIST
