@@ -1,4 +1,6 @@
 FROM debian:8
+#
+## Dockerfile showing usage of shell script to perform more than one acttion on entry
 
 RUN apt update && apt upgrade -y
 RUN apt install git nginx -y
