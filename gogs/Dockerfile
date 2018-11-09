@@ -1,6 +1,6 @@
 FROM alpine:3.8
 #
-## dockerfile serving more than one service
+## Example dockerfile serving N services using an init system
 
 # install ssh server
 RUN apk update && apk upgrade

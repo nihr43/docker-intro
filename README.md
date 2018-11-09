@@ -24,26 +24,26 @@ CMD ["/usr/sbin/sshd", "-D"]
 
 #### Build the image
 ```
-docker build -t "sshd:sshd" .
+docker build -t "demo:sshd" .
 ```
 
 #### Run a new instance of the images
 ```
-docker run -d adba09647b57
+docker run -p 2222:22 -d <image id>
 docker container list
 ```
 
-#### If it won't start, run it in the foreground:
+#### For troubleshooting, run it in the foreground:
 ```
-docker run -it adba09647b57
+docker run -it <image id>
 ```
 
 #### enter a container
 ```
-docker exec -it 5f4477c36969 sh
+docker exec -it <image id> sh
 ```
 
 #### stop a container
 ```
-docker container stop 5f4477c36969
+docker container stop <container id>
 ```
